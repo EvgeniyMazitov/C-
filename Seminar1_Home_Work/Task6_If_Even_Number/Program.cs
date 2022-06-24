@@ -11,13 +11,13 @@ Console.Write("Введите число:");
 string NumberUser = Console.ReadLine();
 bool NumberTest = int.TryParse(NumberUser, out int Number);
 
-if  (NumberTest == false)
+if (NumberTest == false)
     Console.WriteLine("Введено не число");
 else
-    {
-       if (Number % 2 == 0) 
+{
+    if (Number % 2 == 0)
         Console.WriteLine($"Число {Number} является четным");
 
-        else
-            Console.WriteLine($"Число {Number} является нечетным");
-    }
+    else
+        Console.WriteLine($"Число {Number} является нечетным");
+}

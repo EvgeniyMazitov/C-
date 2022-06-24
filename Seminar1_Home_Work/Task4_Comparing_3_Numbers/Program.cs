@@ -19,28 +19,28 @@ Console.WriteLine("Введите третье число");
 string ThirdNumberUser = Console.ReadLine();
 bool ThirdNumberTest = int.TryParse(ThirdNumberUser, out int ThirdNumber);
 
-if  (FirstNumberTest == false || SecondNumberTest == false || ThirdNumberTest == false)
+if (FirstNumberTest == false || SecondNumberTest == false || ThirdNumberTest == false)
     Console.WriteLine("Введено не число");
 
-else 
+else
 
 {
-    max=FirstNumber;
+    max = FirstNumber;
 
-        if (SecondNumber > max)
-            {
-            max = SecondNumber;
-            }
+    if (SecondNumber > max)
+    {
+        max = SecondNumber;
+    }
 
-        if (ThirdNumber > max)
-            {
-            max = ThirdNumber;
-            }
+    if (ThirdNumber > max)
+    {
+        max = ThirdNumber;
+    }
 
-        else
-        {
+    else
+    {
         Console.WriteLine("Введенные числа равны");
-        }
+    }
 
     Console.WriteLine($"max = {max}");
 }

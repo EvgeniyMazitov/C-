@@ -10,16 +10,16 @@ Console.Write("Введите число:");
 string NumberUser = Console.ReadLine();
 bool NumberTest = int.TryParse(NumberUser, out int Number);
 
-if  (NumberTest == false)
+if (NumberTest == false)
     Console.WriteLine("Введено не число");
 else if (Number >= 2)
+{
+    for (int i = 2; i <= Number; i += 2)
     {
-        for (int i = 2; i <= Number; i+=2)
-        {
-        if (Number - i>1)    
-        Console.Write($"{i}, ");
+        if (Number - i > 1)
+            Console.Write($"{i}, ");
         else
-        Console.Write(i);
-        }
+            Console.Write(i);
     }
-    else Console.WriteLine("Введено число в диапазоне (-оо;2). Последовательность не может быть сформирована");
+}
+else Console.WriteLine("Введено число в диапазоне (-оо;2). Последовательность не может быть сформирована");
