@@ -28,5 +28,5 @@ else if (FirstNumber < SecondNumber)
 
 else
 {
-    Console.WriteLine("Среди введенных данных невозможно определить максимальное");
+    Console.WriteLine("Введенные числа равны");
 }
