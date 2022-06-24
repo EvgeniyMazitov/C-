@@ -20,7 +20,7 @@ string ThirdNumberUser = Console.ReadLine();
 bool ThirdNumberTest = int.TryParse(ThirdNumberUser, out int ThirdNumber);
 
 if  (FirstNumberTest == false || SecondNumberTest == false || ThirdNumberTest == false)
-    Console.WriteLine("Введена не цифра");
+    Console.WriteLine("Введено не число");
 
 else 
 

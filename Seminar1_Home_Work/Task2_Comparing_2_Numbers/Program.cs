@@ -15,7 +15,7 @@ string SecondNumberUser = Console.ReadLine();
 bool SecondNumberTest = int.TryParse(SecondNumberUser, out int SecondNumber);
 
 if  (FirstNumberTest == false || SecondNumberTest == false)
-    Console.WriteLine("Введена не цифра");
+    Console.WriteLine("Введено не число");
 else if (FirstNumber > SecondNumber)
 {
     Console.WriteLine($"max = {FirstNumber}");

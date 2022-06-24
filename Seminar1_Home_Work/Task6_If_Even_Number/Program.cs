@@ -8,16 +8,16 @@
 */
 
 Console.Write("Введите число:");
-string FirstNumberUser = Console.ReadLine();
-bool FirstNumberTest = int.TryParse(FirstNumberUser, out int FirstNumber);
+string NumberUser = Console.ReadLine();
+bool NumberTest = int.TryParse(NumberUser, out int Number);
 
-if  (FirstNumberTest == false)
+if  (NumberTest == false)
     Console.WriteLine("Введено не число");
 else
     {
-       if (FirstNumber % 2 == 0) 
-        Console.WriteLine($"Число {FirstNumber} является четным");
+       if (Number % 2 == 0) 
+        Console.WriteLine($"Число {Number} является четным");
 
         else
-            Console.WriteLine($"Число {FirstNumber} является нечетным");
+            Console.WriteLine($"Число {Number} является нечетным");
     }
