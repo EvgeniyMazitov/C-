@@ -7,3 +7,22 @@
 16, 4 -> кратно
 
 */
+
+Console.WriteLine ("Введите первое число");
+String FirstStr = Console.ReadLine();
+int first = int.Parse(FirstStr);
+
+Console.WriteLine ("Введите второе число");
+String SecondStr = Console.ReadLine();
+int second = int.Parse(SecondStr);
+
+int Remember = first % second;
+
+if (Remember == 0)
+{
+    Console.WriteLine("Число кратное");
+}
+else
+{
+    Console.WriteLine($"Число не кратное, остаток {Remember}");
+}
