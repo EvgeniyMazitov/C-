@@ -6,20 +6,10 @@
 918 -> 98
 */
 
-Random rnd = new Random();
-int number = rnd.Next(100,1000); //[10, 100)
-
-Console.WriteLine($"Сгенерированное число {number}");
-
-
-
-
-int firstDigit = number / 10;
-int secondDigit = number % 10;
-
-if(firstDigit > secondDigit)
-    Console.WriteLine(firstDigit);
-else if(secondDigit > firstDigit)
-    Console.WriteLine(secondDigit);
-else
-    Console.WriteLine("Числа равны");
+Random rnd= new Random();
+int number = rnd.Next(100,1000);
+Console.WriteLine(number);
+int firstN = number % 10;
+int secondN = (number / 10) % 10;
+int thirdN = number/ 100;
+Console.WriteLine("Полученное число {0}{1}",thirdN, firstN);
