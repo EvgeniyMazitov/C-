@@ -26,7 +26,7 @@ int max = Max(max1, max2, max3);
 int max = Max(
     Max(a1, b1, c1),
     Max(a2, b2, c2),
-    Max(a3, b3, c3)  
+    Max(a3, b3, c3)
 );
 
 Console.WriteLine(max);
