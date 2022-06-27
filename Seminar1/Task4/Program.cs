@@ -10,7 +10,7 @@
 Console.WriteLine("Введите число:");
 string number = Console.ReadLine();
 int numberN = int.Parse(number);
-int numberN2 = - numberN;
+int numberN2 = -numberN;
 
 for (int i = numberN2; i <= numberN; i++)
 {
