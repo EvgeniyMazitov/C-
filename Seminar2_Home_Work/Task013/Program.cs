@@ -9,7 +9,7 @@
 32679 -> 6
 */
 
-Console.Write("Введите число :");
+Console.Write("Введите число : ");
 string numberUser = Console.ReadLine();
 bool numberTest = int.TryParse(numberUser, out int number);
 
