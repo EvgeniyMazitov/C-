@@ -46,5 +46,6 @@ void ReturnInterval(int quarter)
     else
         Console.WriteLine("х в интервале [0 до +oo), y в интервале (-oo до 0]");
 }
+
 int quarter = GetNumber("Введите номер четверти:");
 ReturnInterval(quarter);
