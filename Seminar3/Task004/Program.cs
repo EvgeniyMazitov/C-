@@ -8,11 +8,11 @@ int GetNumber(string message)
 {
     int result = 0;
 
-    while(true)
+    while (true)
     {
         Console.WriteLine(message);
 
-        if(int.TryParse(Console.ReadLine(), out result))
+        if (int.TryParse(Console.ReadLine(), out result))
         {
             break;
         }
@@ -30,7 +30,7 @@ void Sqrt(int number)
 {
     for (int i = 1; i <= number; i++)
     {
-        Console.WriteLine(Math.Pow(i,2));
+        Console.WriteLine(Math.Pow(i, 2));
     }
 }
 
