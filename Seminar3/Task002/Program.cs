@@ -35,8 +35,6 @@ int GetNumber(string message)
     return result;
 }
 
-
-
 void ReturnInterval(int quarter)
 {
     if (quarter == 1)
