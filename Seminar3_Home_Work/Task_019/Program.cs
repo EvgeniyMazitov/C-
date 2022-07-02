@@ -36,19 +36,16 @@ int GetNumber(string message)
             Console.WriteLine(errorMessage);
         }
     }
-
     return result;
 }
 
 void Palindrom(int number)
 {
-    if(number/10000 == number%10 && (number%10000 - number%1000)/1000== (number%100 - number%10)/10)
+    if (number / 10000 == number % 10 && (number % 10000 - number % 1000) / 1000 == (number % 100 - number % 10) / 10)
         Console.WriteLine("число является палиндромом");
     else
         Console.WriteLine("число не является палиндромом");
-
 }
 
 int number = GetNumber("Введите пятизначное число : ");
-
 Palindrom(number);

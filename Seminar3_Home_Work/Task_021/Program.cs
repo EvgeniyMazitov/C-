@@ -23,7 +23,6 @@ int GetNumber(string message)
         Console.WriteLine(message);
 
         if (int.TryParse(Console.ReadLine(), out result))
-
             break;
         else
         {
@@ -31,7 +30,6 @@ int GetNumber(string message)
             Console.WriteLine(errorMessage);
         }
     }
-
     return result;
 }
 
@@ -42,6 +40,6 @@ int x2 = GetNumber("Введите координату x2: ");
 int y2 = GetNumber("Введите координату y2: ");
 int z2 = GetNumber("Введите координату z2: ");
 
-double length = Math.Round(Math.Sqrt(Math.Pow(x2-x1,2)+Math.Pow(y2-y1,2)+Math.Pow(z2-z1,2)),2);
+double length = Math.Round(Math.Sqrt(Math.Pow(x2 - x1, 2) + Math.Pow(y2 - y1, 2) + Math.Pow(z2 - z1, 2)), 2);
 
 Console.WriteLine($"Расстояние между точками = {length}");
