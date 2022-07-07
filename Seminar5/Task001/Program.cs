@@ -4,73 +4,73 @@
 Например, в массиве [3,9,-8,1,0,-7,2,-1,8,-3,-1,6] сумма положительных чисел равна 29, сумма отрицательных равна -20.
 */
 
-int [] GetArray(int dimension)
+int[] GetArray(int dimension)
 {
-int[] arr = new int[dimension];
-Random randomizer = new Random();
+    int[] arr = new int[dimension];
+    Random randomizer = new Random();
 
-for(int i=0; i < arr.Length; i++)
-{
-   arr[i] = randomizer.Next(-9, 10);
+    for (int i = 0; i < arr.Length; i++)
+    {
+        arr[i] = randomizer.Next(-9, 10);
+    }
+
+    return arr;
 }
 
-return arr;
-}
-
-void PrintArray(int [] arr)
+void PrintArray(int[] arr)
 {
-for (int i = 0; i < arr.Length; i++)
-{
-Console.Write($"{arr[i]} ");
-}
+    for (int i = 0; i < arr.Length; i++)
+    {
+        Console.Write($"{arr[i]} ");
+    }
 }
 
 int GetPositiveSumm(int[] arr)
 {
-int summ = 0;
+    int summ = 0;
 
-for (int i = 0; i < arr.Length; i++)
-{
-    if(arr[i] > 0)
-        summ += arr[i]; // summ = summ + arr[i];
-}
+    for (int i = 0; i < arr.Length; i++)
+    {
+        if (arr[i] > 0)
+            summ += arr[i]; // summ = summ + arr[i];
+    }
 
-return summ;
+    return summ;
 }
 
 int GetNegativeSumm(int[] arr)
 {
-int summ = 0;
+    int summ = 0;
 
-for (int i = 0; i < arr.Length; i++)
-{
-    if(arr[i] < 0)
-        summ += arr[i];
-}
+    for (int i = 0; i < arr.Length; i++)
+    {
+        if (arr[i] < 0)
+            summ += arr[i];
+    }
 
-return summ;
+    return summ;
 }
 
 (int, int) GetPositiveAndNegativeSumm(int[] arr)
 {
-int positiveSumm = 0;
-int negativeSumm = 0;
+    int positiveSumm = 0;
+    int negativeSumm = 0;
 
-for (int i = 0; i < arr.Length; i++)
-{
-    if(arr[i] > 0)
-        positiveSumm += arr[i];
-    else
-        negativeSumm += arr[i];
-}
+    for (int i = 0; i < arr.Length; i++)
+    {
+        if (arr[i] > 0)
+            positiveSumm += arr[i];
+        else
+            negativeSumm += arr[i];
+    }
 
-return (positiveSumm, negativeSumm);
+    return (positiveSumm, negativeSumm);
 }
 
 Console.WriteLine("Введите размерность массива:");
 int dimension = int.Parse(Console.ReadLine());
 
-int [] array = GetArray(dimension);
+int[] array = GetArray(dimension);
 PrintArray(array);
 
 int positiveSumm = GetPositiveSumm(array);
