@@ -5,7 +5,7 @@
 5 -> 120
 */
 
-int GetNumber()
+int GetNumber(string message)
 {
     int result = 0;
     Console.WriteLine("Введите число:");
