@@ -12,7 +12,7 @@ double[] GetArray(int dimension)
 
     for (int i = 0; i < arr.Length; i++)
     {
-        arr[i] = (double)(randomizer.Next(0, 10000))/100;
+        arr[i] = (double)(randomizer.Next(0, 10000)) / 100;
     }
 
     return arr;
@@ -33,7 +33,7 @@ double GetMaxElement(double[] arr)
     for (int i = 0; i < arr.Length; i++)
     {
         if (arr[i] > max)
-            max= arr[i];
+            max = arr[i];
     }
 
     return max;
@@ -46,7 +46,7 @@ double GetMinElement(double[] arr)
     for (int i = 0; i < arr.Length; i++)
     {
         if (arr[i] < min)
-            min= arr[i];
+            min = arr[i];
     }
 
     return min;
@@ -60,7 +60,7 @@ PrintArray(array);
 
 double max = GetMaxElement(array);
 double min = GetMinElement(array);
-double result = max-min;
+double result = max - min;
 
 Console.WriteLine();
 Console.WriteLine($"Максимальный элемент массива = {max}");
