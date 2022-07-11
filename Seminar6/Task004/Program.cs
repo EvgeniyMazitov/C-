@@ -47,3 +47,55 @@ void Fibonacci(int number)
 
 int number1 = GetNumber("Введите число");
 Fibonacci(number1);
+
+/*
+
+int GetNumber()
+{
+    int result = 0;
+    Console.WriteLine("Введите число:");
+    while(true)
+    {
+        if(int.TryParse(Console.ReadLine(), out result))
+        {
+            break;
+        }
+        else
+        {
+            Console.Clear();
+            Console.WriteLine("Вы ввели не число. Введите корректное число");
+        }
+    }
+
+    return result;
+}
+
+
+void Fibonacci(int number)
+{
+    int result = 0;
+    int sum = 0;
+    int firstnumber = 1;
+    int secondnumber = 1;
+
+    if (number == 0)
+    {
+        Console.WriteLine("0");
+        return;
+    }
+    else if(number == 1)
+    {
+Console.Write("0 1 1 ");
+    for (int i = 3; i < number; i++)
+    {   
+        sum = firstnumber + secondnumber;
+        firstnumber = secondnumber;
+        secondnumber = sum;
+        Console.Write($"{sum} ");
+    }
+    
+}
+int number1 = GetNumber();
+Fibonacci(number1);
+
+*/
