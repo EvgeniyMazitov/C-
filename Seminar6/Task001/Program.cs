@@ -5,39 +5,39 @@
 [6 7 3 6] -> [6 3 7 6]
 */
 
-int [] GetArray(int dimension)
+int[] GetArray(int dimension)
 {
-int [] arr = new int[dimension];
-Random randomizer = new Random();
+    int[] arr = new int[dimension];
+    Random randomizer = new Random();
 
-for (int i = 0; i < arr.Length; i++)
-{
-    arr[i] = randomizer.Next(1,10);
+    for (int i = 0; i < arr.Length; i++)
+    {
+        arr[i] = randomizer.Next(1, 10);
+    }
+
+    return arr;
 }
 
-return arr;
+void PrintArray(int[] arr)
+{
+    for (int i = 0; i < arr.Length; i++)
+    {
+        Console.Write($"{arr[i]} ");
+    }
 }
 
-void PrintArray(int [] arr)
+int[] ArrayReverse(int[] arr)
 {
-for (int i = 0; i < arr.Length; i++)
-{
-Console.Write($"{arr[i]} ");
-}
-}
+    int[] resultArray = new int[arr.Length];
+    int count = 0;
 
-int [] ArrayReverse(int [] arr)
-{
-int [] resultArray = new int[arr.Length];
-int count = 0;
+    for (int i = arr.Length - 1; i >= 0; i--)
+    {
+        resultArray[count] = arr[i];
+        count++;
+    }
 
-for (int i = arr.Length - 1; i >= 0; i--)
-{
-    resultArray[count] = arr[i];
-    count++;
-}
-
-return resultArray;
+    return resultArray;
 }
 
 Console.WriteLine("Начальный массив: ");

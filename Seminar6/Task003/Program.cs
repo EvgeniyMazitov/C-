@@ -29,25 +29,26 @@ int GetNumber(string message)
     return result;
 }
 
-string DecimalToBinar( int number)
+string DecimalToBinar(int number)
 {
-int result = 0;
-string buffer = string.Empty;
-while (number >0)
-{
-    result = number%2;
-    number=number/2;
-    buffer=buffer + result;
-//    Console.Write(result);
-}
-return buffer;
+    int result = 0;
+    string buffer = string.Empty;
+    while (number > 0)
+    {
+        result = number % 2;
+        number = number / 2;
+        buffer = buffer + result;
+        //    Console.Write(result);
+    }
+    return buffer;
 }
 
 void ReverseString(string inputString)
-{for (int i = inputString.Length-1; i >=0; i--)
 {
-   Console.Write(inputString[i]); 
-}
+    for (int i = inputString.Length - 1; i >= 0; i--)
+    {
+        Console.Write(inputString[i]);
+    }
 
 }
 
