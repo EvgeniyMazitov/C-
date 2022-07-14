@@ -43,12 +43,11 @@ void PrintMatrix(int[,] matrix)
 
 void ChangeMatrix(int[,] matrix)
 {
-    for (int i = 2; i < matrix.GetLength(0); i+=2)
+    for (int i = 1; i < matrix.GetLength(0); i += 2)
     {
-        for (int j = 2; j < matrix.GetLength(1); j+=2)
+        for (int j = 1; j < matrix.GetLength(1); j += 2)
         {
- //           if (( % 2 = 0 && j % 2 = 0 && i!= 0 && j != 0)
-                matrix[i, j] = matrix[i, j] * matrix[i, j];
+            matrix[i, j] = matrix[i, j] * matrix[i, j];
         }
     }
 }
