@@ -1,7 +1,54 @@
 ﻿/*
-Задача 41: Пользователь вводит с клавиатуры M чисел.
-Посчитайте, сколько чисел больше 0 ввёл пользователь.
-
-0, 7, 8, -2, -2 -> 2
-1, -7, 567, 89, 223-> 3
+Транспонирование матрицы
 */
+
+int [,] InitMatrix(int m, int n)
+{
+    int [,] matrix = new int[m,n];
+    Random randomizer = new Random();
+
+    for (int i = 0; i < m; i++)
+    {
+        for (int j = 0; j < n; j++)
+        {
+            matrix[i,j] = randomizer.Next(1,10);
+        }
+    }
+    return matrix;
+}
+
+void PrintMatrix(int[,] matrix)
+{
+    for (int i = 0; i < matrix.GetLength(0); i++)
+    {
+        for (int j = 0; j < matrix.GetLength(1); j++)
+        {
+            Console.Write($"{matrix[i, j]}  ");
+        }
+        Console.WriteLine();
+    }
+}
+
+int[,] TranspMatrix(int[,] mtrx, int m, int n)
+{
+    int[,] newMatrix = new int[n, m];
+    for (int i = 0; i < n; i++)
+    {
+        for (int j = 0; j < m; j++)
+        {
+            newMatrix[i,j] = mtrx[j,i];
+        }
+    }
+    return newMatrix;
+}
+Console.WriteLine("Введите размер матрицы:");
+int m = int.Parse(Console.ReadLine());
+int n = int.Parse(Console.ReadLine());
+
+int[,] matrix = InitMatrix(m, n);
+
+Console.WriteLine($"Матрица размером {m}x{n}:");
+PrintMatrix(matrix);
+int[,] newMatrix = TranspMatrix(matrix,m,n);
+Console.WriteLine($"Транспонированная (повернутая) матрица размером {n}x{m}:");
+PrintMatrix(newMatrix);
