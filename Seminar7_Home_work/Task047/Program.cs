@@ -18,7 +18,7 @@ double[,] InitMatrix(int m, int n)
     {
         for (int j = 0; j < n; j++)
         {
-            matrix[i, j] = randomizer.Next(1, 10);
+            matrix[i, j] = (double)(randomizer.Next(-99, 100)) / 10;
         }
     }
     return matrix;
