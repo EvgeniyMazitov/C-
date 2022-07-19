@@ -1,7 +1,7 @@
 ﻿//Треугольник паскаля
-int row = 9;
+int row = 32;
 int[,] triangle = new int[row, row];
-const int cellWidth = 5;
+const int cellWidth = 1;
 
 void FillTriangle()
 {
@@ -42,7 +42,8 @@ void Magic()
         for (int j = 0; j <= i; j++)
         {
             Console.SetCursorPosition(col, i + 1);
-            if (triangle[i, j] != 0) Console.Write($"{triangle[i, j],cellWidth}");
+//            if (triangle[i, j] != 0) Console.Write($"{triangle[i, j],cellWidth}");
+            if (triangle[i, j] %2 != 0) Console.Write($"*");
             col += cellWidth * 2;
         }
 
