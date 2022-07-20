@@ -9,7 +9,6 @@
 10 9 8 7
 */
 
-
 int GetNumber(string message)
 {
     int result = 0;
@@ -28,31 +27,75 @@ int GetNumber(string message)
     }
     return result;
 }
-/*
 int[,] InitMatrix(int m)
 {
     int[,] matrix = new int[m, m];
-    Random rand = new Random();
-    for (int i = 0; i < m; i++)
-        for (int j = 0; j < m; j++) matrix[i, j] = rand.Next(m, m+1);
-    for (int currentChar = 1, padding = 0; padding < m / 2; padding++)
+    int decrement = 0;
+    int angle = 1;
+    int number = 1;
+    int count = 0;
+    int rule = 0;
+    if (m % 2 == 1)
     {
-        for (int j = padding; j < m - padding; j++)
-            matrix[padding, j] = currentChar;
-        for (int j = padding; j < m - padding; j++)
-            matrix[m - padding - 1, j] = currentChar;
-        for (int i = padding + 2; i < m - padding - 1; i++)
-            matrix[i, padding] = currentChar;
-        for (int i = padding + 1; i < m - padding - 1; i++)
-            matrix[i, m - padding - 1] = currentChar;
-        currentChar = 1 - currentChar;
-        matrix[padding + 1, padding] = currentChar;
+        matrix[m / 2, m / 2] = m * m;
+        rule++;
     }
-    if (m % 2 != 0 && matrix[0, 0] == 1) matrix[m / 2, m / 2] = 1; return matrix;
+
+    while (number <= m * m - rule)
+    {
+        if (angle == 1)
+        {
+            for (int j = 0 + decrement; j < m - 1 - decrement; j++)
+            {
+                matrix[0 + decrement, j] = number;
+                number++;
+            }
+            angle = 2;
+            count++;
+        }
+
+        else if (angle == 2)
+        {
+            for (int i = 0 + decrement; i < m - 1 - decrement; i++)
+            {
+                matrix[i, m - 1 - decrement] = number;
+                number++;
+            }
+            angle = 3;
+            count++;
+        }
+
+        else if (angle == 3)
+        {
+            for (int j = m - 1 - decrement; j >= 0 + 1 + decrement; j--)
+            {
+                matrix[m - 1 - decrement, j] = number;
+                number++;
+            }
+            angle = 4;
+            count++;
+        }
+
+        else if (angle == 4)
+        {
+            for (int i = m - 1 - decrement; i >= 0 + 1 + decrement; i--)
+            {
+                matrix[i, 0 + decrement] = number;
+                number++;
+            }
+            angle = 1;
+            count++;
+        }
+
+        if (count == 4)
+        {
+            count = 0;
+            decrement++;
+        }
+    }
+
+    return matrix;
 }
-*/
-
-
 
 void PrintMatrix(int[,] matrix)
 {

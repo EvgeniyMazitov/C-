@@ -74,7 +74,7 @@ int[,] MultiMatrix(int[,] matrix1, int[,] matrix2, int m, int n)
     {
         for (int j = 0; j < matrix1.GetLength(1); j++)
         {
-            resultMatrix[i,j]=matrix1[i,j]*matrix2[i,j];
+            resultMatrix[i, j] = matrix1[i, j] * matrix2[i, j];
         }
     }
     return resultMatrix;
