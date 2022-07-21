@@ -25,7 +25,7 @@ int GetNumber(string message)
 
 int Power(int a, int b)
 {
-    if (b == 1 || b == 0)
+    if (b == 1)
         return a;
     else
         return a = a * Power(a, b - 1);
@@ -34,4 +34,4 @@ int Power(int a, int b)
 int a = GetNumber("Введите число a:");
 int b = GetNumber("Введите число b:");
 
-Console.WriteLine($"{a}в степени {b} равно {Power(a, b)}");
+Console.WriteLine($"{a} в степени {b} равно {Power(a, b)}");
