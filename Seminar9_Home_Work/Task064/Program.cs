@@ -28,13 +28,13 @@ int GetNumber(string message)
 
 string Interval(int m, int n)
 {
-    if(n == m)
+    if (n == m)
         return m.ToString();
     else
-        return Interval(m,n-1) + ", "+ n;
+        return Interval(m, n - 1) + ", " + n;
 }
 
 int m = GetNumber("Введите число M:");
 int n = GetNumber("Введите число N:");
 
-Console.Write($"{Interval(m,n)}");
+Console.Write($"{Interval(m, n)}");
